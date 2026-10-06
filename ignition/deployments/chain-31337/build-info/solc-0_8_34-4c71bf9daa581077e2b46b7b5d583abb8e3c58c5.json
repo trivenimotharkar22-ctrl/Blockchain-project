@@ -1,0 +1,49 @@
+{
+  "_format": "hh3-sol-build-info-1",
+  "id": "solc-0_8_34-4c71bf9daa581077e2b46b7b5d583abb8e3c58c5",
+  "solcVersion": "0.8.34",
+  "solcLongVersion": "0.8.34+commit.80d5c536",
+  "compilerType": "solc",
+  "toolVersions": {
+    "hardhat": "3.18.1"
+  },
+  "userSourceNameMap": {
+    "contracts/StudentRegistration.sol": "project/contracts/StudentRegistration.sol"
+  },
+  "input": {
+    "language": "Solidity",
+    "settings": {
+      "evmVersion": "osaka",
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "outputSelection": {
+        "*": {
+          "": [
+            "ast"
+          ],
+          "*": [
+            "abi",
+            "evm.bytecode.linkReferences",
+            "evm.bytecode.object",
+            "evm.bytecode.opcodes",
+            "evm.bytecode.sourceMap",
+            "evm.deployedBytecode.immutableReferences",
+            "evm.deployedBytecode.linkReferences",
+            "evm.deployedBytecode.object",
+            "evm.deployedBytecode.opcodes",
+            "evm.deployedBytecode.sourceMap",
+            "evm.methodIdentifiers"
+          ]
+        }
+      },
+      "remappings": []
+    },
+    "sources": {
+      "project/contracts/StudentRegistration.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.0;\r\n\r\ncontract StudentRegistration {\r\n\r\n    struct Student {\r\n        string name;\r\n        uint256 rollNumber;\r\n    }\r\n\r\n    mapping(uint256 => Student) public students;\r\n\r\n    function registerStudent(\r\n        string memory _name,\r\n        uint256 _rollNumber\r\n    ) public {\r\n        students[_rollNumber] = Student(_name, _rollNumber);\r\n    }\r\n\r\n    function getStudent(uint256 _rollNumber)\r\n        public\r\n        view\r\n        returns (string memory, uint256)\r\n    {\r\n        Student memory student = students[_rollNumber];\r\n\r\n        return (student.name, student.rollNumber);\r\n    }\r\n}\r\n"
+      }
+    }
+  }
+}

@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    color: #1f2937;
+}
+
+/* Navbar */
+
+nav {
+    background: #111827;
+    color: white;
+    padding: 18px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.nav-text {
+    color: #cbd5e1;
+}
+
+/* Hero */
+
+.hero {
+    text-align: center;
+    padding: 60px 20px 35px;
+}
+
+.hero h1 {
+    font-size: 40px;
+    margin-bottom: 12px;
+    color: #111827;
+}
+
+.hero p {
+    color: #64748b;
+    font-size: 17px;
+}
+
+/* Main container */
+
+.container {
+    max-width: 1000px;
+    margin: 20px auto 60px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+/* Cards */
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.card h2 {
+    margin-bottom: 25px;
+    color: #111827;
+}
+
+/* Form */
+
+label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 7px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+input:focus {
+    outline: none;
+    border-color: #2563eb;
+}
+
+/* Button */
+
+button {
+    width: 100%;
+    margin-top: 22px;
+    padding: 13px;
+    border: none;
+    border-radius: 8px;
+    background: #2563eb;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
+/* Status */
+
+.status {
+    margin-top: 15px;
+    color: #2563eb;
+}
+
+/* Result */
+
+.result {
+    margin-top: 25px;
+    padding: 18px;
+    background: #f1f5f9;
+    border-radius: 10px;
+    line-height: 1.8;
+}
+
+.result strong {
+    color: #111827;
+}
+
+/* Footer */
+
+footer {
+    text-align: center;
+    padding: 25px;
+    background: #111827;
+    color: #cbd5e1;
+}
+
+/* Responsive */
+
+@media (max-width: 700px) {
+
+    nav {
+        padding: 15px 5%;
+        flex-direction: column;
+        gap: 5px;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+        margin: 10px auto 40px;
+    }
+
+    .card {
+        padding: 22px;
+    }
+}
